@@ -1,0 +1,34 @@
+
+$font:'Raleway', sans-serif;
+
+$blue-main:#3072af;
+$blue-light:#3ca9f7;
+
+$bg-color:#e2e9ec;
+$bg-image:"../img/bg-body.png";
+
+$shadow-basic:1px 0px 8px rgba(0, 0, 0, 0.25);
+
+
+
+$smartphone-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 960px;
+
+@mixin smartphone {
+  @media (min-width: #{$smartphone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

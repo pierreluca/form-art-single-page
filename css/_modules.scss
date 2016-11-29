@@ -1,0 +1,477 @@
+/* 
+Main Header Structure 
+*/
+
+.header__left{
+
+}
+
+.header__center {
+	display: none;
+	padding-top: 10px;
+	text-align: center;
+	@include tablet {
+		display: block;
+		transform: scale(0.5);
+	}
+	@include desktop {
+		display: block;
+		transform: scale(1);
+	}
+}
+
+.header__right {
+	text-align: right;
+	padding-right: 15px;
+	margin-left: -15px;
+}
+
+/* 
+Main Header Elements
+*/
+
+.logo {
+	float: left;
+	width: 170px;
+	height: 55px;
+	background: url('../img/bg-logo.png') no-repeat;
+	background-size: 100%;
+	color: #fff;
+	@include desktop {
+		width: 308px;
+		height: 97px;
+	}
+	h1 {
+		margin: 0 0 12px;
+		text-indent: 20px;
+		letter-spacing: 2px;
+		font-weight: bold;
+		font-size: 23px;
+		padding: 5px 0 0;
+		@include desktop {
+			text-indent: 38px;
+			padding: 8px 0 0;
+			font-size: 40px;
+		}
+	}
+}
+.payoff {
+	width: 114px;
+	margin: -10px 0px 0px 21px;
+	padding-top: 2px;
+	border-top: 1px solid #fff;
+	letter-spacing: 0;
+	font-size: 9px;
+	@include desktop {
+		width: 192px;
+		margin: -10px 0px 0px 39px;
+		border-top: 2px solid #fff;
+		letter-spacing: 0.5px;
+		font-size: 14px;
+	}
+}
+
+$height-nav:110px;
+.nav-bullet {
+	height: $height-nav;
+	padding-top: 75px;
+	@include desktop {
+		display: none;
+	}
+}
+.nav-main{
+	margin-top: -($height-nav);
+	@include desktop {
+		margin-top: 0;
+	}
+}
+.header__bullet {
+	border: 2px solid $blue-main;
+	width:17px;
+	height:17px;
+	border-radius: 50%;
+	cursor: pointer;
+	&--active{
+		background-color: $blue-main;
+		cursor: default;
+	}
+	&:hover{
+		background-color: $blue-main;
+	}
+}
+
+/*
+Global elements
+*/
+
+.flex{
+	display: flex;
+}
+.no-flex-mobile {
+	display: block;
+	@include desktop {
+		display: flex;
+	}
+}
+
+.arrow {
+	width: 30px;
+	height: 30px;
+	margin: 6px 6px 6px 0;
+	background-color: $blue-main;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.55);
+	cursor: pointer;
+	transition:  transform 200ms ease;
+	@include tablet {
+		width: 40px;
+		height: 40px;
+	}
+	@include desktop {
+	 	width: 60px;
+	 	height: 60px;
+	 	border: 3px solid #fff;
+	}
+	&__up{
+	    background: $blue-main url(../img/arrow-up.png) no-repeat center center;
+	    background-size: 18px auto;
+	    @include tablet {
+	    	background-size: 23px auto;
+	    }
+	    @include desktop {
+	    	background-size: auto;
+	    }
+	}
+	&__down{
+	    background: $blue-main url(../img/arrow-down.png) no-repeat center center;
+	    background-size: 18px auto;
+	    @include tablet {
+	    	background-size: 23px auto;
+	    }
+	    @include desktop {
+	    	background-size: auto;
+	    }
+	}
+	&:hover:enabled{
+		transform: scale(1.09);
+	}
+	&--disabled {
+		background-color: #b4b4b4;
+		opacity: 0.7;
+		cursor: default;
+	}
+	&--in-page {
+		width: 45px;
+		height: 45px;
+		margin: 0px auto;
+		border: 2px solid #fff;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.55);
+		background-size: 61%;
+	}
+}
+
+.box{
+	min-height: 100vh;
+	width: 100%;
+	background: $bg-color;
+}
+
+/*
+Section one
+*/
+
+.one{
+	@extend .box;
+	margin-top: 110px;
+	min-height: 415px;
+	height: 70vh;
+	background: $bg-color url("../img/bg-library.png") left top;
+	display: flex;
+	flex-flow: column;
+	@include desktop {
+		margin-top: 170px;
+	}
+}
+
+.welcome-head {
+	margin-top: 20px;
+	@include tablet {
+		display: none;
+	}
+}
+
+.welcome {
+	width: 220px;
+	height: 180px;
+	margin: 5px auto 15px;
+	padding-top: 11px;
+	background: transparent url("../img/bg-welcome.png") left top no-repeat;
+	background-size: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	line-height: 1.15;
+	@include tablet {
+		width: 333px;
+		height: 271px;
+		margin-top: 44px;
+		padding-top: 25px;
+		font-size: 25px;
+	}
+	#name {
+		width: 88%;
+		margin: 9px 0px 15px;
+		padding: 3px 5px;
+		background-color: rgb(255, 255, 255);
+		border: 0px none;
+		border-radius: 5px;
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.55);
+		color: #3072AF;
+		text-align: center;
+		font-size: 17px;
+		@include tablet {
+			margin: 23px 0px 25px;
+			font-size: 26px;
+		}
+	}
+}
+
+/*
+Section two
+*/
+
+.two{
+	@extend .box;
+	text-align: center;
+	color: #fff;
+}
+
+.hello {
+	padding: 15px;
+	margin: -25px 0 0;
+	background: $blue-main;
+	box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.23);
+	font-size: 20px;
+	font-weight: bold;
+	@include tablet {
+		font-size: 34px;
+	}
+	@include desktop {
+		margin: -25px -20px 0;
+	}
+}
+.history{
+	background: $bg-color url('../img/dec-cards.png') no-repeat 0px -50px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.history__incipit{
+	width: 75%;
+	margin: 45px auto;
+	padding: 8px;
+	background: $blue-main;
+	border-radius: 7px;
+	font-size: 13px;
+	letter-spacing: 1px;
+	font-weight: bold;
+	@include tablet {
+		font-size: 27px;
+	}
+}
+.history__card{
+	width: 90%;
+	height: auto;
+	margin-bottom: 50px;
+	padding: 200px 16px 30px;
+	background: $blue-light;
+	border: 3px solid #fff;
+	border-radius: 17px;
+	box-shadow: 8px 5px 0 RGBA(0, 0, 0, 0.14);
+	font-size: 16px;
+	&--hands{
+		background: $blue-light url('../img/big-icon-hands.png') no-repeat center 35px;
+	}
+	&--people{
+		background: $blue-light url('../img/big-icon-people.png') no-repeat center 35px;
+	}
+	&--books{
+		background: $blue-light url('../img/big-icon-books.png') no-repeat center 35px;
+	}
+	@include tablet {
+		width: 75%;
+	}
+	@include desktop {
+		min-width: 270px;
+		width: 29%;
+		height: 350px;
+		br{ 
+			display: block;
+		}
+	}
+	br{ 
+		display: none;
+	}
+}
+
+/*
+Section three
+*/
+
+.three{
+	@extend .box;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box-red {
+	width: 90%;
+	background: #ee5a60;
+	border-radius: 12px;
+	box-shadow: 8px 4px 0 RGBA(0, 0, 0, 0.14);
+	padding: 28px 21px 21px 21px;
+	margin: 45px auto;
+	text-align: center;
+	@include tablet{
+		width: 75%;
+	}
+	@include desktop{
+		width: 45%;
+	}
+	&__title{
+		color: #fff;
+		font-weight: bold;
+		font-size: 110%;
+		margin-bottom: 15px;
+		@include tablet{
+			font-size: 28px;
+		}
+	}
+	&__tab{
+		border: 2px solid #ee5a60;
+		background: #fff;
+		box-shadow: 2px 2px 8px 0px RGBA(47, 47, 47, 0.32);
+		border-radius: 10px 10px 0px 0px;
+		border-bottom: none;
+		padding: 15px 5%;
+		width: 33.3%;
+		float: left;
+		color: #b64547;
+		font-weight: bold;
+		font-size: 60%;
+		@include tablet{
+			font-size: 19px;
+		}
+		&--no-select{
+			border-bottom: 4px solid rgb(238, 90, 96);
+			padding-bottom: 11px;
+		}	
+	}
+	&__content{
+		float: left;
+		width: 99.9%;
+		padding: 28px;
+		background: #fff;
+		box-shadow: 2px 6px 8px -3px RGBA(47, 47, 47, 0.32);
+		border: 2px solid #ee5a60;
+		border-radius: 0px 0px 5px 5px;
+		border-top: none;
+		text-align: justify;
+		line-height: 1.5;
+		font-size: 13px;
+		@include desktop{
+			line-height: 1.8;
+			font-size: 18px;
+		}
+	}
+	&__list{
+		border: 1px solid #ee5a60;
+		background: #fff;
+		box-shadow: 2px 2px 8px 0px RGBA(47, 47, 47, 0.32);
+		border-radius: 5px;
+		padding: 15px;
+		.h2 {
+			font-size: 100%;
+			font-weight: bold;
+			color: rgb(224, 83, 38);
+			margin: 15px auto 20px;
+			@include tablet{
+				font-size: 21px;
+			}
+			>br{
+				display: none;
+				@include desktop{
+					display: block;
+				}
+			}
+		}
+		li {
+			text-align: left;
+			margin-bottom: 8px;
+			padding: 2px 4px 2px 8px;
+			font-size: 100%;
+			font-weight: bold;
+			list-style: outside none none;
+			color: rgb(103, 103, 103);
+			background: transparent url("../img/arr-black.png") no-repeat scroll 90% center;
+			@include tablet{
+				font-size: 18px;
+			}
+			&:hover{
+				color: #000;
+				cursor: pointer;
+				border: 1px solid #ccc;
+				border-top: 0;
+				border-right: 0;
+				border-radius: 8px;
+				margin-bottom: 7px;
+			}
+		}
+	}
+	&__bottom{
+		color: rgb(255, 255, 255);
+		font-weight: bold;
+		margin-top: 20px;
+		font-size: 16px;
+	}
+}
+
+.box-red--deco-1 {
+	background: url('../img/graffa-in.png') no-repeat;
+	width: 100px;
+	height: 110px;
+	position: relative;
+	top: -82px;
+	left: -33%;
+	@include tablet{
+		top: -94px;
+		left: -37%;
+	}
+}
+
+.box-red--deco-2 {
+	background: url('../img/table-top.png') no-repeat;
+	width: 179px;
+	height: 40px;
+	position: relative;
+	top: -102.8%;
+	//left: 0;
+	@include smartphone{
+		//top: -482px;
+	}
+}
+
+.box-red--deco-3 {
+	background: url('../img/graffe.png') no-repeat;
+	display: none;
+}
+
+
+/*
+Section four
+*/
+
+.four{
+	@extend .box;
+}
+
