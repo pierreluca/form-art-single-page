@@ -8,7 +8,7 @@ $bg-color:#e2e9ec;
 $bg-image:"../img/bg-body.png";
 
 $shadow-basic:1px 0px 8px rgba(0, 0, 0, 0.25);
-
+$shadow-dark:1px 3px 8px rgba(0, 0, 0, 0.75);
 
 
 $smartphone-width: 480px;
@@ -31,4 +31,8 @@ $desktop-width: 960px;
   @media (min-width: #{$desktop-width}) {
     @content;
   }
+}
+
+.h-d-none{
+	display: none;
 }

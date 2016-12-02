@@ -1,3 +1,7 @@
+.h-d-none {
+  display: none;
+}
+
 * {
   margin: 0 auto;
   padding: 0;
@@ -476,7 +480,7 @@ Section three
   border-radius: 12px;
   box-shadow: 8px 4px 0 RGBA(0, 0, 0, 0.14);
   padding: 28px 21px 21px 21px;
-  margin: 45px auto;
+  margin: 65px auto;
   text-align: center;
 }
 
@@ -500,7 +504,7 @@ Section three
 
 @media (min-width: 960px) {
   .box-red--two {
-    height: 491px;
+    height: 505px;
   }
 }
 
@@ -537,9 +541,18 @@ Section three
   }
 }
 
-.box-red__tab--no-select {
+.box-red__tab--active {
   border-bottom: 4px solid #ee5a60;
   padding-bottom: 11px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.box-red__tab--active:hover {
+  border-bottom: 4px solid #ee5a60;
+  padding-bottom: 16px;
+  padding-top: 17px;
+  margin-top: -7px;
 }
 
 .box-red__content {
@@ -597,12 +610,19 @@ Section three
 .box-red__list li {
   text-align: left;
   margin-bottom: 8px;
-  padding: 2px 4px 2px 8px;
-  font-size: 100%;
+  padding: 4px 4px 4px 8%;
   font-weight: bold;
   list-style: outside none none;
   color: #676767;
   background: transparent url("../img/arr-black.png") no-repeat scroll 90% center;
+  font-size: 13px;
+  transition: all 0.2s linear;
+}
+
+@media (min-width: 480px) {
+  .box-red__list li {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -612,20 +632,29 @@ Section three
 }
 
 .box-red__list li:hover {
-  color: #000;
+  color: #fff;
+  background-color: #3072af;
   cursor: pointer;
-  border: 1px solid #ccc;
-  border-top: 0;
-  border-right: 0;
-  border-radius: 8px;
-  margin-bottom: 7px;
+  border-radius: 4px;
+  background-image: url("../img/arr-white.png");
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.75);
 }
 
 .box-red__bottom {
   color: white;
   font-weight: bold;
-  margin-top: 20px;
-  font-size: 16px;
+  margin-top: 4px;
+  font-size: 9px;
+}
+
+.box-red__bottom img {
+  margin: 6px 2px -7px 10px;
+}
+
+@media (min-width: 480px) {
+  .box-red__bottom {
+    font-size: 16px;
+  }
 }
 
 .box-red--deco-1 {

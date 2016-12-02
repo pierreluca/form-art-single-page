@@ -330,7 +330,7 @@ Section three
 	border-radius: 12px;
 	box-shadow: 8px 4px 0 RGBA(0, 0, 0, 0.14);
 	padding: 28px 21px 21px 21px;
-	margin: 45px auto;
+	margin: 65px auto;
 	text-align: center;
 	@include tablet{
 		width: 75%;
@@ -342,7 +342,7 @@ Section three
 		@include desktop{height: 411px;}
 	}
 	&--two{
-		@include desktop{height: 491px;}
+		@include desktop{height: 505px;}
 	}
 	&__title{
 		color: #fff;
@@ -368,9 +368,17 @@ Section three
 		@include tablet{
 			font-size: 19px;
 		}
-		&--no-select{
+		&--active{
 			border-bottom: 4px solid rgb(238, 90, 96);
 			padding-bottom: 11px;
+			cursor: pointer;
+			transition: all 0.2s linear;
+			&:hover{
+				border-bottom: 4px solid rgb(238, 90, 96);
+				padding-bottom: 16px;
+				padding-top: 17px;
+				margin-top: -7px;
+			}
 		}	
 	}
 	&__content{
@@ -414,31 +422,42 @@ Section three
 		li {
 			text-align: left;
 			margin-bottom: 8px;
-			padding: 2px 4px 2px 8px;
-			font-size: 100%;
+			padding: 4px 4px 4px 8%;
 			font-weight: bold;
 			list-style: outside none none;
 			color: rgb(103, 103, 103);
 			background: transparent url("../img/arr-black.png") no-repeat scroll 90% center;
+			font-size: 13px;
+			transition: all 0.2s linear;
+			@include smartphone{
+				font-size: 16px;
+			}
 			@include tablet{
 				font-size: 18px;
 			}
 			&:hover{
-				color: #000;
+				color: #fff;
+				background-color: $blue-main;
 				cursor: pointer;
-				border: 1px solid #ccc;
-				border-top: 0;
-				border-right: 0;
-				border-radius: 8px;
-				margin-bottom: 7px;
+				border-radius: 4px;
+				background-image: url("../img/arr-white.png");
+				box-shadow: $shadow-dark;
+				//border-bottom: 1px solid #fff;
+				//padding-bottom: 3px;
 			}
 		}
 	}
 	&__bottom{
 		color: rgb(255, 255, 255);
 		font-weight: bold;
-		margin-top: 20px;
-		font-size: 16px;
+		margin-top: 4px;
+		font-size: 9px;
+		img{
+			margin: 6px 2px -7px 10px;
+		}
+		@include smartphone{
+			font-size: 16px;
+		}
 	}
 }
 
