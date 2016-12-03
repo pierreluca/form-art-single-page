@@ -2,6 +2,14 @@
   display: none;
 }
 
+.h-f-right {
+  float: right;
+}
+
+.icon {
+  font-style: normal;
+}
+
 * {
   margin: 0 auto;
   padding: 0;
@@ -30,7 +38,7 @@ header {
   height: 75px;
   max-width: 960px;
   background-color: #fff;
-  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.55);
   display: flex;
   flex-wrap: wrap;
   flex-flow: row;
@@ -69,7 +77,7 @@ header {
   .l-box {
     padding: 25px 20px;
     min-height: 100vh;
-    box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.55);
   }
 }
 
@@ -158,8 +166,24 @@ Main Header Elements
 }
 
 .nav-bullet {
-  height: 110px;
+  height: 124px;
   padding-top: 75px;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+@media (min-width: 480px) {
+  .nav-bullet {
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-bullet {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
 }
 
 @media (min-width: 960px) {
@@ -169,7 +193,7 @@ Main Header Elements
 }
 
 .nav-main {
-  margin-top: -110px;
+  margin-top: -124px;
 }
 
 @media (min-width: 960px) {
@@ -180,8 +204,8 @@ Main Header Elements
 
 .header__bullet {
   border: 2px solid #3072af;
-  width: 17px;
-  height: 17px;
+  width: 19px;
+  height: 19px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -317,7 +341,7 @@ Section one
 }
 
 .welcome-head {
-  margin-top: 20px;
+  margin-top: 35px;
 }
 
 @media (min-width: 768px) {
@@ -655,6 +679,68 @@ Section three
   .box-red__bottom {
     font-size: 16px;
   }
+}
+
+.box-red__tab-mask {
+  position: absolute;
+  background: #f2f2f2;
+  width: 90%;
+  height: 398px;
+  left: 5%;
+  margin-top: 125px;
+}
+
+@media (min-width: 768px) {
+  .box-red__tab-mask {
+    left: 12.5%;
+    width: 75%;
+    height: 441px;
+    margin-top: 139px;
+  }
+}
+
+@media (min-width: 960px) {
+  .box-red__tab-mask {
+    left: auto;
+    margin-left: -437px;
+    width: 414px;
+    height: 435px;
+  }
+}
+
+.box-red__tab-mask__container {
+  border: 2px solid #df5227;
+  margin: 20px;
+  border-radius: 8px;
+  padding: 70px 15px 15px;
+  background: #fff;
+  color: #666;
+  height: 90%;
+  overflow-y: hidden;
+}
+
+.box-red__tab-mask__container h3 {
+  margin-bottom: 15px;
+}
+
+.box-red__tab-mask__container p {
+  padding-right: 38px;
+  overflow-y: scroll;
+  height: 267px;
+}
+
+.box-red__tab-mask__icon {
+  float: right;
+  margin-top: -70px;
+  margin-right: -3px;
+  font-size: 30px;
+  color: #df5227;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.box-red__tab-mask__icon:hover {
+  transform: scale(1.2, 1.2);
 }
 
 .box-red--deco-1 {

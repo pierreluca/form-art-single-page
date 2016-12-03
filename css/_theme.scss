@@ -7,7 +7,7 @@ $blue-light:#3ca9f7;
 $bg-color:#e2e9ec;
 $bg-image:"../img/bg-body.png";
 
-$shadow-basic:1px 0px 8px rgba(0, 0, 0, 0.25);
+$shadow-basic:1px 0px 8px rgba(0, 0, 0, 0.55);
 $shadow-dark:1px 3px 8px rgba(0, 0, 0, 0.75);
 
 
@@ -35,4 +35,12 @@ $desktop-width: 960px;
 
 .h-d-none{
 	display: none;
+}
+
+.h-f-right{
+	float: right;
+}
+
+.icon{
+	font-style: normal;
 }
