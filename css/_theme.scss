@@ -36,6 +36,9 @@ $desktop-width: 960px;
 .h-d-none{
 	display: none;
 }
+.h-d-block{
+	display: block;
+}
 
 .h-f-right{
 	float: right;
@@ -43,4 +46,24 @@ $desktop-width: 960px;
 
 .icon{
 	font-style: normal;
+}
+
+
+
+.controller{
+	position: fixed;
+	top:0 ; left: 0;
+	width: 100%;
+	margin: 120px auto 0;
+	font-size: 45px;
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	opacity: 0.7;
+	@include desktop{
+		margin-top: 180px;
+	}
+	&>div{
+		width: 100%;
+	}
 }
