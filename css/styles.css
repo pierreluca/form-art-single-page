@@ -947,20 +947,20 @@ Section four
 
 @media (min-width: 960px) {
   .become__content--bullet {
-    margin: 10px -40px;
+    margin: 10px -55px;
   }
 }
 
 .become__footer {
   width: auto;
-  margin: 0 5%;
+  margin: 0 5% 25px;
   text-align: center;
   background: #3cb647;
   border-radius: 5px;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   padding: 5px 15px;
 }
 

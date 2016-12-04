@@ -657,20 +657,20 @@ Section four
 				margin: 15px -3%;
 			}
 			@include desktop{
-				margin: 10px -40px;
+				margin: 10px -55px;
 			}
 		}
 	}
 	&__footer{
 		width: auto;
-		margin: 0 5%;
+		margin: 0 5% 25px;
 		text-align: center;
 		background: #3cb647;
 		border-radius: 5px;
 		font-weight: bold;
 		color: #fff;
 		text-decoration: none;
-		font-size: 18px;
+		font-size: 15px;
 		padding: 5px 15px;
 		@include smartphone{
 			font-size: 24px;

@@ -18,6 +18,9 @@ $( document ).ready(function() {
                 $('.nav-main').css('margin-top','-124px');
             }
 
+        } else {
+            $('.nav-bullet').css('margin-top','-124px');
+            $('.nav-main').css('margin-top','0');
         }
 
 	});
